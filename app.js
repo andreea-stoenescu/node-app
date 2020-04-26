@@ -1,6 +1,9 @@
-const validator = require("validator");
+const chalk = require("chalk");
 const getNotes = require("./notes");
 
-console.log(getNotes());
+console.log(chalk.green.bgRed.bold("Success!"));
 
-console.log(validator.isURL("http://fdd.com"));
+console.log(chalk`
+DANGER: ${chalk.red("99%")}
+WARNING: ${chalk.green("60%")}
+`);
